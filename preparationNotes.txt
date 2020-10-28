@@ -1,0 +1,41 @@
+
+ ---------------------------------------------------------------
+ -countdownlatch
+- @Profile to dynamically activate profile in class
+- differnece between supplier and provider in java stream lambda function
+  java 8 supplier, https://stackoverflow.com/questions/40244571/when-we-should-use-supplier-in-java-8
+  
+
+- Spring Proxy versus 
+   proxy concept
+ 
+
+- Dynamic proxy using reflection API
+ 
+ --------------------------Spring transactions-------------------
+ 
+- Transactional in hibernate (very imp) [ @RetentionPolicy,  ]
+- Propagation (https://www.javainuse.com/spring/boot-transaction-propagation)
+
+	Transaction propogation only applies when we are calling another class instance method. If same instance
+	method is called, then due to Spring AOP proxy, it won't be able to surround that particular method so its not
+	really considered as separate method call from transaction perspective (Even if transaction annotation is there)
+
+- Readonly, rollbackFor, norollbackFor
+- Transaction Isolation 
+- Spring transaction events (Transaction Synchronization) Use, Transaciton Event lIsterner and Transaction event publisher
+	https://dzone.com/articles/transaction-synchronization-and-spring-application
+
+
+------------------ANGULAR----------------------------------------------
+
+- what are angular routing gaurd https://medium.com/@ryanchenkie_40935/angular-authentication-using-route-guards-bf7a4ca13ae3
+
+- Angular routing pattern
+
+- user service only in component
+
+- New addition in angular 8
+
+- @Input/@Output
+  
