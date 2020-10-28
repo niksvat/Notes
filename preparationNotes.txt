@@ -38,4 +38,8 @@
 - New addition in angular 8
 
 - @Input/@Output
-  
+ 
+- rxjs operators and concepts
+	* observable
+	* promises
+	* Subject - 2 types
