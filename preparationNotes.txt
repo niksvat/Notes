@@ -28,7 +28,7 @@
 
 - Bean wiring with factory pattern: If there is any change lets say in GET API having region as parameter and lets say in future there might be new region that could been added here, how to code that to minimze future code edits
 
-- java 8 consumer, producers, functions 
+- java 8 consumer, supplier, functions, predicate 
 
 ------------------ANGULAR----------------------------------------------
 
