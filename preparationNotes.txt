@@ -28,6 +28,8 @@
 
 - Bean wiring with factory pattern: If there is any change lets say in GET API having region as parameter and lets say in future there might be new region that could been added here, how to code that to minimze future code edits
 
+- java 8 consumer, producers, functions 
+
 ------------------ANGULAR----------------------------------------------
 
 - what are angular routing gaurd https://medium.com/@ryanchenkie_40935/angular-authentication-using-route-guards-bf7a4ca13ae3
