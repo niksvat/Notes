@@ -30,6 +30,7 @@
 
 - java 8 consumer, supplier, functions, predicate 
 - diff between @component and @bean
+- Microservices design pattern 
 
 ------------------ANGULAR----------------------------------------------
 
