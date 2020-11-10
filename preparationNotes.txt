@@ -31,6 +31,10 @@
 - java 8 consumer, supplier, functions, predicate 
 - diff between @component and @bean
 - Microservices design pattern 
+- Singletone pattern with lazy intialization and threadsafe with cloning protect
+- Reentrant lock
+- Deep Copy and shallow copy 
+- Functional API JAVA and operations over Collections with collectors
 
 ------------------ANGULAR----------------------------------------------
 
