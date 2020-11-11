@@ -35,6 +35,7 @@
 - Reentrant lock
 - Deep Copy and shallow copy 
 - Functional API JAVA and operations over Collections with collectors
+- Parllel streams
 
 ------------------ANGULAR----------------------------------------------
 
