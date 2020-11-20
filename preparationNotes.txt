@@ -35,7 +35,13 @@
 - Reentrant lock
 - Deep Copy and shallow copy 
 - Functional API JAVA and operations over Collections with collectors
-- Parllel streams
+- Parllel streams\
+
+- OpenAPI Specification
+- Status sent back on delete api
+- Diff put and patch http method
+- How to configure swagger
+- If A -> B then C and something bad happen in C call, then how to rollback the transaction
 
 ------------------ANGULAR----------------------------------------------
 
