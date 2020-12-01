@@ -43,7 +43,7 @@
 - How to configure swagger
 - If A -> B then C and something bad happen in C call, then how to rollback the transaction
 
-- Optimistic and pessimistic approach - cache, banking when two separate transaction happen
+- Optimistic and pessimistic approach - cache, banking when two separate transaction happen | distributed locking
 - spring 5 new feature
 - how java garbage collector works
 ------------------ANGULAR----------------------------------------------
