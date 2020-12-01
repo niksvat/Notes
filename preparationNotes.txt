@@ -43,6 +43,9 @@
 - How to configure swagger
 - If A -> B then C and something bad happen in C call, then how to rollback the transaction
 
+- Optimistic and pessimistic approach - cache, banking when two separate transaction happen
+- spring 5 new feature
+- 
 ------------------ANGULAR----------------------------------------------
 
 - what are angular routing gaurd https://medium.com/@ryanchenkie_40935/angular-authentication-using-route-guards-bf7a4ca13ae3
