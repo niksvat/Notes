@@ -2,7 +2,7 @@
  ---------------------------------------------------------------
  -countdownlatch
 - @Profile to dynamically activate profile in class
-- differnece between supplier and provider in java stream lambda function
+- differnece between supplier and consumers in java stream lambda function
   java 8 supplier, https://stackoverflow.com/questions/40244571/when-we-should-use-supplier-in-java-8
   
 
