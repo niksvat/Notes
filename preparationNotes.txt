@@ -22,7 +22,7 @@
 	really considered as separate method call from transaction perspective (Even if transaction annotation is there)
 
 - Readonly, rollbackFor, norollbackFor
-  If present in try catch block, and rollbackFor is used then transaction will not roll back, cause its catched function doesn't know that if raised.
+  If present in try catch block, and rollbackFor is used then transaction will not roll back, cause it is catched inside the funciton hence, function doesn't know that if raised.
   
 - Transaction Isolation 
 - Spring transaction events (Transaction Synchronization) Use, Transaciton Event lIsterner and Transaction event publisher
