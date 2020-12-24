@@ -28,7 +28,9 @@
 - Transaction Isolation 
 - Spring transaction events (Transaction Synchronization) Use, Transaciton Event lIsterner and Transaction event publisher
 	https://dzone.com/articles/transaction-synchronization-and-spring-application
-- oneToManyMapping and manytoonemapping in jpa
+	
+	
+- oneToManyMapping and manytoonemapping in jpa (https://stackoverflow.com/questions/16408546/hibernate-one-to-many-single-direction)
 - Bean wiring with factory pattern: If there is any change lets say in GET API having region as parameter and lets say in future there might be new region that could been added here, how to code that to minimze future code edits
 
 - java 8 consumer, supplier, functions, predicate 
