@@ -14,6 +14,7 @@
  -CAP theorem, Example of liking the post and count the likes etc 
  --------------------------Spring transactions-------------------
  
+
 - Transactional in hibernate (very imp) [ @RetentionPolicy,  ]
 - Propagation (https://www.javainuse.com/spring/boot-transaction-propagation)
 
@@ -27,7 +28,7 @@
 - Transaction Isolation 
 - Spring transaction events (Transaction Synchronization) Use, Transaciton Event lIsterner and Transaction event publisher
 	https://dzone.com/articles/transaction-synchronization-and-spring-application
-
+- oneToManyMapping and manytoonemapping in jpa
 - Bean wiring with factory pattern: If there is any change lets say in GET API having region as parameter and lets say in future there might be new region that could been added here, how to code that to minimze future code edits
 
 - java 8 consumer, supplier, functions, predicate 
