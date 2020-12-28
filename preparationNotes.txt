@@ -47,7 +47,7 @@
 - Status sent back on delete api
 - Diff put and patch http method
 - How to configure swagger
-- If A -> B then C and something bad happen in C call, then how to rollback the transaction
+- If A -> B then C and something bad happen in C call, then how to rollback the transaction (https://medium.com/swlh/handling-transactions-in-the-microservice-world-c77b275813e0)
 
 - Optimistic and pessimistic approach - cache, banking when two separate transaction happen | distributed locking
 - spring 5 new feature
