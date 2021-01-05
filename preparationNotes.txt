@@ -36,7 +36,9 @@
 - java 8 consumer, supplier, functions, predicate 
 - diff between volatile and transient
 - diff between @component and @bean (https://codeboje.de/difference-spring-bean-component/)
-- Microservices design pattern 
+- Microservices design pattern ]
+  2 phase commit: https://developers.redhat.com/blog/2018/10/01/patterns-for-distributed-transactions-within-a-microservices-architecture/
+  SAGA: https://microservices.io/patterns/data/saga.html
 - Singletone pattern with lazy intialization and threadsafe with cloning protect
 - Reentrant lock
 - Deep Copy and shallow copy 
