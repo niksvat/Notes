@@ -53,7 +53,8 @@
 
 - Optimistic and pessimistic approach - cache, banking when two separate transaction happen | distributed locking
 - spring 5 new feature
-- how java garbage collector works
+- how java garbage collector works : Avoid memory leakage https://www.baeldung.com/java-memory-leaks#:~:text=A%20Memory%20Leak%20is%20a,degrades%20system%20performance%20over%20time.
+
 - avoid race condition in java
 	event sourcing 
 - annotation processing in java, how to implements dependency injection without using spring
