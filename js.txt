@@ -70,4 +70,20 @@ Switch
 
 
 
+loops
+-------------------------------------
+
+let a = ['a','b','c','d','e'];
+for(let x in a){
+  console.log(x);
+}
+// 0,1,2,3,4,5
+
+for(let x of a){
+  console.log(x);
+}
+// a,b,c,d,e
+
+
+
 
