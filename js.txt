@@ -84,6 +84,13 @@ for(let x of a){
 }
 // a,b,c,d,e
 
+const arr = ['a', 'b', 'c', 'd'];
+
+arr.forEach((value, index, array) => {
+    console.log('index', index, 'has a value of', value,
+    'which correlates to array[' + index + ']:', array[index]);
+});
+
 
 try-catch-finally
 --------------------------------------
