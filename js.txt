@@ -85,5 +85,20 @@ for(let x of a){
 // a,b,c,d,e
 
 
+try-catch-finally
+--------------------------------------
+- return from 'catch' or 'try' then finally will execute always
+- throw new Error('custom message');
+
+
+
+
+
+
+
+
+
+
+
 
 
