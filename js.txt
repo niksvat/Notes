@@ -19,3 +19,10 @@ Function
   function hello(){
   }
 - IIFE (Immediately invoked function expression)
+
+
+
+var, let, const
+----------------------------
+- var has function scope
+- let, const has block scope
