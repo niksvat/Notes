@@ -93,8 +93,42 @@ try-catch-finally
 
 
 
+Object
+--------------------------------------
+- attributes and behaviour
+- notations: object.propertyname or object['propertyname']
+- creations:
+  objects can be created via
+      * Object.create()
+      * 'new' keyworkd
+      * Object literals
+      
+************************************
+var x = {
+    a: 5, 
+    foo: function() {
+        return this.a * this.a;
+    }
+};
 
+var o = Object.create(x);
+************************************
 
+var o = new Object();
+
+o.a = 4;
+o.b = 'Rome';
+o.c = true;
+************************************
+//intiatilzer
+var p = {
+    a: 3, 
+    b: 'Rome', 
+    c: false
+};
+************************************
+
+       
 
 
 
