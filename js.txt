@@ -49,7 +49,24 @@ Falsy
   - NaN
   - "" (i.e., the empty string)
 
+Switch
+---------------------
 
+
+    switch (n) {
+        case 2:
+            console.log("A");
+        case 3:
+            console.log("B");
+        case 4:
+            console.log("C");
+        case 5:
+            console.log("D");
+        default:
+            console.log("E");
+    }
+    
+    switch(4) => C,D,E so break in required.
 
 
 
