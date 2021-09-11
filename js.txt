@@ -8,3 +8,14 @@ Total 7 types of data type:
 7. Object
 
 number+string = string (parseInt)
+
+Function
+----------------------------
+- Bydefault, function returns undefined.
+- Function expression : 
+  function(){
+  }
+- Named function expression:
+  function hello(){
+  }
+- IIFE (Immediately invoked function expression)
