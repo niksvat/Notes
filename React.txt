@@ -1,1 +1,3 @@
 
+Change Detection:
+https://indepth.dev/posts/1064/what-every-front-end-developer-should-know-about-change-detection-in-angular-and-react
