@@ -99,9 +99,11 @@ Object
 - notations: object.propertyname or object['propertyname']
 - creations:
   objects can be created via
+    -Object initialzers  
       * Object.create()
       * 'new' keyworkd
       * Object literals
+    - constructor function
       
 ************************************
 var x = {
@@ -127,7 +129,16 @@ var p = {
     c: false
 };
 ************************************
+// constructor functions
+function Actor(firstName, lastName, Age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.Age = Age;
+}
 
+var a1 = new Actor('Julia', 'Roberts', 48);
+var a2 = new Actor('Kate', 'Winslet', 40);
+************************************
        
 
 
