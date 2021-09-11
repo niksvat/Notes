@@ -26,3 +26,31 @@ var, let, const
 ----------------------------
 - var has function scope
 - let, const has block scope
+
+
+if else
+----------------------------
+console.log(1 == 1);            => true 
+console.log(1 == "1");          => true
+console.log('1' == 1);          => true 
+console.log(0 == false);        => true
+console.log(0 == null);         => false
+console.log(0 == undefined);    => false
+console.log(null == undefined); => true 
+
+=== -> strict equality
+
+Falsy
+
+  - false
+  - undefined
+  - null
+  - 0
+  - NaN
+  - "" (i.e., the empty string)
+
+
+
+
+
+
