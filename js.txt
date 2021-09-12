@@ -26,7 +26,7 @@ var, let, const
 ----------------------------
 - var has function scope
 - let, const has block scope
-
+- var is hoisted, let & const are not hoisted
 
 if else
 ----------------------------
@@ -147,6 +147,151 @@ var a1 = new Actor('Julia', 'Roberts', 48);
 var a2 = new Actor('Kate', 'Winslet', 40);
 ************************************
        
+
+
+*************************************************** CLASSES ***************************************************
+
+=> Using constructor functions
+-------------------------------------
+function Fruit (type) {
+    this.type = type;
+    this.color = 'unknown';
+    this.getInformation = getFruitInformation;
+}
+
+function getFruitInformation() {
+    return 'This ' + this.type + ' is ' + this.color + '.';
+}
+
+let lime = new Fruit('Mexican lime');
+console.log(lime.getInformation());
+
+
+
+=> Using internal functions defination
+---------------------------------------
+function Fruit (type) {
+    this.type = type;
+    this.color = 'unknown';
+    this.getInformation = function() {
+        return 'This ' + this.type + ' is ' + this.color + '.';
+    }
+}
+
+let lime = new Fruit('Mexican lime');
+console.log(lime.getInformation());
+
+NOTE: Here function is created everytime we create new object
+
+=> Prototype
+---------------------------------------
+- Every function in js has prototype property, which act as blueprint of object for this function. This is used in inheritance.
+
+
+function Fruit (type) {
+    this.type = type;
+    this.color = 'unknown';
+}
+
+Fruit.prototype.getInformation = function(){
+  return 'This ' + this.type + ' is ' + this.color + '.';
+}
+
+=> Using object literals
+----------------------------------------
+let x = {
+  a: 1,
+  b: function() {
+         return 'aaaa';
+     }
+}
+
+console.log(x.a);
+
+
+=> Using class keyword (syntatic sugar)
+--------------------------------------
+- This is not hoisted while functions declarations are hoisted.
+
+class Polygon {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+}
+
+let p = new Polygon(1, 2);
+
+    * Unnamed class
+       let a =  class {
+          constructor(par){
+            this.par = par;
+          }
+       } 
+
+    * Named class 
+      let a = class polygon{
+        //todo
+      }
+
+- constructor is only one special method, called once when object is created and use for intitalization
+- To implement inheritance, super keyword is used, to call parent class constructor.
+
+- Static methods (methods relevant to all object of classes)
+---------------------------------------------------------------------
+
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    static distance(a, b) {
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+}
+
+const p1 = new Point(5, 5);
+
+- Inheritance
+-------------------------------------------------------------------
+- inheritance is supported using extends keyword
+- We can also extends functional classes
+- child override parent function
+
+
+class Animal {
+    constructor(name) {
+        this.animalType = 'Animal'
+        this.name = name;
+    }
+    type() {
+        console.log(this.name, 'is type', this.animalType);
+    }
+    speak() {
+        console.log(this.name, 'speaks.');
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, collarColor) {
+        super(name);
+        this.animalType = 'Dog';
+        this.collarColor = collarColor;
+    }
+    speak() {
+        console.log(this.name, 'barks.');
+    }
+    collar() {
+        console.log(this.name, 'has a', this.collarColor, 'collar.');
+    }
+}
+
+let spot = new Dog('Spot', 'red');
+spot.type();   //spot is type of dog.
+spot.speak();  //spot barks.
+spot.collar(); //spot has red collar.
 
 
 
