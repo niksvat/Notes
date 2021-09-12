@@ -150,6 +150,7 @@ var a2 = new Actor('Kate', 'Winslet', 40);
 
 
 *************************************************** CLASSES ***************************************************
+(https://www.hackerrank.com/challenges/js10-class/topics)
 
 => Using constructor functions
 -------------------------------------
