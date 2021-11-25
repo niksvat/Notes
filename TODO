@@ -1,1 +1,2 @@
-inner-api: currenly doing authentication using client grant -> add custom filter along with role based support
+* inner-api: currenly doing authentication using client grant -> add custom filter along with role based support
+* Once spring boot application started, then all rewring of autowired will happen with each request? and can static variable be used?
