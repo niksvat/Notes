@@ -1,2 +1,17 @@
 * inner-api: currenly doing authentication using client grant -> add custom filter along with role based support
 * Once spring boot application started, then all rewring of autowired will happen with each request? and can static variable be used, to save data if no pods restarting?
+* List to MAP
+         ArrayList<String[]> al = new ArrayList();
+
+        al.add(new String[]{"0", "222", "121"});
+        al.add(new String[]{"0", "333", ""});
+        al.add(new String[]{"1", "444", ""});
+        al.add(new String[]{"1", "555", ""});
+        al.add(new String[]{"1", "666", ""});
+        al.add(new String[]{"1", "777", "3443"});
+        al.add(new String[]{"1", "888", ""});
+        al.add(new String[]{"2", "999", ""});
+        al.add(new String[]{"3", "352", ""});
+
+        // only second field
+        Map<String, List<Long>> map = al.stream().collect(??));
