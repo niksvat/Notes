@@ -3,7 +3,7 @@ General
 ---------------------------------------------------
 OOPS - Abstraction, Encapsulation, Inheritance, and Polymorphism
 SOLID Design Principals -  single responsibility principle, open-closed principle, Liskov substitution principle, interface segregation principle, and dependency inversion principle
-
+(https://www.bmc.com/blogs/solid-design-principles/#:~:text=SOLID%20is%20an%20acronym%20that,some%20important%20benefits%20for%20developers.)
 
 
  ---------------------------------------------------------------
