@@ -1,4 +1,11 @@
 
+General
+---------------------------------------------------
+OOPS - Abstraction, Encapsulation, Inheritance, and Polymorphism
+SOLID Design Principals -  single responsibility principle, open-closed principle, Liskov substitution principle, interface segregation principle, and dependency inversion principle
+
+
+
  ---------------------------------------------------------------
  -countdownlatch
 - @Profile to dynamically activate profile in class
