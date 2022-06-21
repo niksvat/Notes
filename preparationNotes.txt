@@ -39,6 +39,9 @@ SOLID Design Principals -  single responsibility principle, open-closed principl
 	
 - oneToManyMapping and manytoonemapping in jpa (https://stackoverflow.com/questions/16408546/hibernate-one-to-many-single-direction)
 - oneToMany (https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/)
+- Mappings (https://medium.com/@rajibrath20/the-best-way-to-map-a-onetomany-relationship-with-jpa-and-hibernate-dbbf6dba00d3)
+
+
 - Bean wiring with factory pattern: If there is any change lets say in GET API having region as parameter and lets say in future there might be new region that could been added here, how to code that to minimze future code edits
 
 - java 8 consumer, supplier, functions, predicate 
