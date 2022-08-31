@@ -15,3 +15,8 @@
 
         // only second field
         Map<String, List<Long>> map = al.stream().collect(??));
+
+
+
+1> Java streams all main examples
+2> React notes (basic)
