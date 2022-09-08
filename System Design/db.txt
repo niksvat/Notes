@@ -1,0 +1,59 @@
+Types of DB:
+===============
+1. sql
+2. nosql
+	 - key value based (dynamo db)
+     - document based (mongo db)	
+	 - graph based (neo4j)
+	 - wide columnar storage (time series like influxdb)
+	 - column oriented db  (column stores)
+	 
+	 
+	* Key Value Based: 
+		= Table
+		    = {
+				key1: "", 
+				key2: ""
+			  }
+	
+	* Document Based:
+		= Database
+			= Collection1
+			= Collection2 
+				= Document1
+					= Key "_id"
+					= {
+					     "firstName": "abs",
+						 "lastName" : "cde"
+					  },
+					  {
+					     "firstName": "x3s",
+						 "lastName" : "csdde",
+						 "Address" : " H NO 22"
+					  }
+				= Document2
+	 
+	 * Graph based (Neo4j)
+		- each node has some property 
+		- each node has list of neighbours
+		
+	 * Wide columnar based db: (timeseries or cassandra)
+		- Data is stored in terms of columns (2d key value pair). 
+		  means it can be accessed from row or column
+		
+		cassandra:
+			= keyspace (db)
+				= table
+					= column (carmake, car_id, emp_id, etc..)
+
+		timeseries: 
+			= each row can represent data in particular hour (or time unit)
+			
+	 * Column oriented DB:
+		- (diff: https://en.wikipedia.org/wiki/Wide-column_store )
+		- each column are stored separately in disk 
+			
+
+		
+		
+		
