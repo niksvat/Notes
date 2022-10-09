@@ -16,6 +16,8 @@ SOLID Design Principals -  single responsibility principle, open-closed principl
 - Spring Proxy versus 
    proxy concept
  
+- Differnence between dependency inversion and dependency injection.
+https://medium.com/ssense-tech/dependency-injection-vs-dependency-inversion-vs-inversion-of-control-lets-set-the-record-straight-5dc818dc32d1#:~:text=The%20Inversion%20of%20Control%20is,dependencies%20to%20an%20application's%20class.
 
 - Dynamic proxy using reflection API
  -CAP theorem, Example of liking the post and count the likes etc 
