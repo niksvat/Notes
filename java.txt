@@ -74,19 +74,3 @@ https://medium.com/ssense-tech/dependency-injection-vs-dependency-inversion-vs-i
 - Spring transactions synchonization
   if in current function is synchronized and we are calling an api, then in order to how to avoid dirty read
 
-------------------ANGULAR----------------------------------------------
-
-- what are angular routing gaurd https://medium.com/@ryanchenkie_40935/angular-authentication-using-route-guards-bf7a4ca13ae3
-
-- Angular routing pattern
-
-- user service only in component
-
-- New addition in angular 8
-
-- @Input/@Output
- 
-- rxjs operators and concepts
-	* observable
-	* promises
-	* Subject - 2 types
