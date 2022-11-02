@@ -73,4 +73,4 @@ https://medium.com/ssense-tech/dependency-injection-vs-dependency-inversion-vs-i
 - annotation processing in java, how to implements dependency injection without using spring
 - Spring transactions synchonization
   if in current function is synchronized and we are calling an api, then in order to how to avoid dirty read
-
+- How to implement rate limiting on Rest API?
