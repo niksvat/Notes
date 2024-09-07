@@ -192,6 +192,17 @@ var a1 = new Actor('Julia', 'Roberts', 48);
 var a2 = new Actor('Kate', 'Winslet', 40);
 ************************************
 
+Internal property, getter and setters
+
+const obj = {
+  set title(val) {
+    this._title = val;   //triggered when obj.title = 'something';
+  },
+  get title() {
+    return this._title; //triggered when console.log(obj.title);
+  }
+}
+
 bind, call, apply (this)
 ******************
 
@@ -221,7 +232,7 @@ function() {
 console.log(this) //->refers to this just outside of this arrow function 
 }
 
-
+Example 1:
 const team = {
   name: "something",
   people: ["a", "b"],
@@ -241,7 +252,17 @@ const team = {
     });
   }
 }
-  
+
+Example 2:
+
+const person = { 
+    name: 'Max',
+    greet: () => {
+        console.log(this.name); // however this refers to global object 'window' (even in strict mode)
+    }
+};
+ 
+person.greet(); 
 
 *************************************************** CLASSES ***************************************************
 (https://www.hackerrank.com/challenges/js10-class/topics)
