@@ -192,15 +192,56 @@ var a1 = new Actor('Julia', 'Roberts', 48);
 var a2 = new Actor('Kate', 'Winslet', 40);
 ************************************
 
-this
-**********
-- refers to thing that called that function.
-- Example
+bind, call, apply (this)
+******************
+
   function something() {
     console.log(this);
   }
-  something.bind(object)
 
+bind
+ - something.bind(object) // it won't execute function something
+
+call
+- something.call(object, , , , )
+
+apply
+- something.apply(object, [,,,])
+
+this will now refers to object in something
+
+this & arrow function
+*********************
+
+function() {
+  console.log(this); //-> this refers to something that call this function
+}
+
+() => {
+console.log(this) //->refers to this just outside of this arrow function 
+}
+
+
+const team = {
+  name: "something",
+  people: ["a", "b"],
+  getname() {
+    this.people.forEach(p => {
+      console.log(p + " " + this.name); // this works
+    });
+  }
+}
+
+const team = {
+  name: "something",
+  people: ["a", "b"],
+  getname() {
+    this.people.forEach(function(p){
+      console.log(p + " " + this.name);  // this.name is undefined since, this will refer to window object.
+    });
+  }
+}
+  
 
 *************************************************** CLASSES ***************************************************
 (https://www.hackerrank.com/challenges/js10-class/topics)
