@@ -1,17 +1,31 @@
+Introduction
+---------------
+- ECMA
+ECMA 5  -> ECMA 6
+var    |   let, const etc
+
+ECMA 6 = Major upgrade around 2015-16
+
+- <script src="/path" defer> vs <script src="/path" async>
+  - defer: script will be downloaded in parallel to parsing HTML but executed after whole file is downloaded (HTML)
+  - async: scripts will be downloaded and executed asap
+
+- "use strict" 
+
 Total 7 types of data type:
 1. Number
 2. string
 3. boolean
 4. null
 5. undefined
-6. Symbol (NaN, Infinity, -Infinity) (create symbol type var x = Symbol('This is test'))
+6. Symbol (NaN is type of number, Infinity, -Infinity) (create symbol type var x = Symbol('This is test'))
 7. Object
 
-number+string = string (parseInt)
+number + string = string (parseInt)
 
 Function
 ----------------------------
-- Bydefault, function returns undefined.
+- By default, function returns undefined.
 - Function expression : 
   function(){
   }
@@ -100,8 +114,35 @@ try-catch-finally
 --------------------------------------
 - return from 'catch' or 'try' then finally will execute always
 - throw new Error('custom message');
+- or 
+  throw {message: "Something"}
 
+Spread operator
+---------------
 
+const arr1 = [1, 2, 3]
+const arr2 = [...arr1] // spread elements of arr1
+Math.min(...arr2) => will give min element from arr
+
+const obj = {
+  info: 'something',
+  name: 'something'
+}
+
+const obj2 = {...ojb} // new object with values copied from previous
+
+Array and object restructuring:
+-------------------------------
+
+const [first, sec] = [1, 2, 3] //first -> 1
+
+const obj = {
+
+  info: 'something',
+  name: 'something'
+
+}
+const {info} = obj; // info refers to obj's info
 
 
 Object
@@ -150,7 +191,15 @@ function Actor(firstName, lastName, Age) {
 var a1 = new Actor('Julia', 'Roberts', 48);
 var a2 = new Actor('Kate', 'Winslet', 40);
 ************************************
-       
+
+this
+**********
+- refers to thing that called that function.
+- Example
+  function something() {
+    console.log(this);
+  }
+  something.bind(object)
 
 
 *************************************************** CLASSES ***************************************************
