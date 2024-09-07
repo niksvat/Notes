@@ -203,6 +203,11 @@ const obj = {
   }
 }
 
+Object.assign
+***************
+
+const newObj = Object.assign({}, obj); //copy but not shallow
+
 bind, call, apply (this)
 ******************
 
