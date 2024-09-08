@@ -566,6 +566,8 @@ Addeventlistener registers things on the bubbling phase, which means the button 
 
 JS Modules
 ------------
+
+<script src = "something" type="module"> </script> // type = module needs to be mentioned
 Export
 
 export const something  //named export
