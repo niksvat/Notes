@@ -559,4 +559,7 @@ async function something() {
 }
 - just fancy way of writing promise, under the hood its not async programming rather this thing will wrap itself in then, catch etc.
 
+Capturing and bubbling phase
+----------------------------
 
+Addeventlistener register things on bubbling phase, means button even will be triggered first then section event surronding that button.
