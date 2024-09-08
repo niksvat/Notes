@@ -11,7 +11,7 @@ ECMA 6 = Major upgrade around 2015-16
   - async: scripts will be downloaded and executed asap
 
 - "use strict" 
-- Event loop, stack, heap memory management 
+- Event loop, stack, heap memory management, JS is single threaded but it oflload events task to browser and browser when find stack empty push from queue to execute the JS method callbacks.
 
 Total 7 types of data type:
 1. Number
