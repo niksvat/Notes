@@ -562,4 +562,36 @@ async function something() {
 Capturing and bubbling phase
 ----------------------------
 
-Addeventlistener register things on bubbling phase, means button even will be triggered first then section event surronding that button.
+Addeventlistener registers things on the bubbling phase, which means the button even will be triggered first then a section event surrounding that button.
+
+JS Modules
+------------
+Export
+
+export const something  //named export
+export default function() {...} //default export
+
+IMPORT
+
+import func, {something as somethingelse} from './file.js';  //for default func and for name {something}
+import * as data from './file.js';
+data.something // for bundling named export
+
+
+- code in module execute once and only once its been loaded
+
+IMPORT LATER
+- below will be imported when below line executes may be in listener.
+
+import('./file.js').then(module => {
+  const something = new module.ToolTip();
+});
+
+- If you want to make anything available at global level, window object can be used (globalThis keyword)
+  - In one file set globalThis.something = 'val';
+  - In another file, let val = globalThis.something;
+
+
+
+
+
