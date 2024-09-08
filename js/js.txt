@@ -336,7 +336,8 @@ NOTE: Here function is created everytime we create new object
 => Prototype
 ---------------------------------------
 - Every function in js has prototype property, which act as blueprint of object for this function. This is used in inheritance.
-
+- Each object has prototype and this is basically act as fallback object. There is prototype chain, and js use it to connect objects internally. (__proto__)
+JS keep checking prototype to find method in chain
 
 function Fruit (type) {
     this.type = type;
@@ -444,10 +445,74 @@ spot.speak();  //spot barks.
 spot.collar(); //spot has red collar.
 
 
-Prototype
+Promises
 --------
-Each object has prototype and this is basically act as fallback object. There is prototype chain, and js use it to connect objects internally. (__proto__)
-JS keep checking prototype to find method in chain
+- To avoid callback hell, promises were introduced.
+- Let say after button click we have to fetch user location and after fetching user location, add 2 sec delay and then print the location.
+
+button.addEventListener('click', trackUserHandler);
+function trackUserHandler() {
+  navigator.geolocation.getCurrentPosition((data) => {
+    setTimeout(() => {
+      console.log(data);
+    }, 200);
+  }, error => {
+    console.log(error);
+  });
+}
+
+this function is wrapped in callbacks, we can use promise
+
+const setTimer = duration => {
+  const promise = new Promise((resolve, reject) => { //arrow function inside Promise argument executed immediately
+    setTimeout(() => {
+      resolve('DONE');
+    } , duration);
+  });
+  return promise;
+};
+
+function trackUserHandler() {
+  navigator.geolocation.getCurrentlocation((data) => {
+    setTimer(2000).then(status => {
+      console.log(status + ":"+ data);  //DONE:{data}   done comes from previous resolve.
+    }, promiseError => {
+      console.log(promiseError);
+    })
+  }, error => {
+    console.log(error);
+  });
+}
+
+OR
+
+function trackUserHandler() {
+  navigator.geolocation.getCurrentlocation((data) => {
+    setTimer(2000).then(status => {
+      console.log(status + ":"+ data);  //DONE:{data}   done comes from previous resolve.
+    }).then(error => {
+      console.log(error);
+    })
+  }, error => {
+    console.log(error);
+  });
+}
+
+Promise chaining
+----------------
+
+.then(1)
+.then(2)
+.error()    //if error occur in 1, 2 will be skipped and this error will return new promise and hence 3 will continue;
+.then(3)
+.then(4)
+.error()    // promise will be resolved at last level.
+
+ - you can return either new promise inside then or just data. If data is returned, it will be wrapped in promise.
+
+
+
+
 
 
 
