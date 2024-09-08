@@ -554,9 +554,9 @@ async function something() {
   } catch(error) {
     console.log(error);
   }
-
-// this will be blocked until above resolves.
+   something(); // this will be blocked until above resolves.
 }
+- use await only in front of function that returns promise.
 - just fancy way of writing promise, under the hood its not async programming rather this thing will wrap itself in then, catch etc.
 
 Capturing and bubbling phase
