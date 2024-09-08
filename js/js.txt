@@ -500,6 +500,8 @@ function trackUserHandler() {
 
 Promise chaining
 ----------------
+Promise can be in PENDING or FULFILLED or REJECTED state.
+If you return something inside catch, and then use then(), it will become again in PENDING state.
 
 .then(1)
 .then(2)
@@ -511,9 +513,50 @@ Promise chaining
  - you can return either new promise inside then or just data. If data is returned, it will be wrapped in promise.
 
 
+const promise = new Promise((resolve, reject) => {
+  getSomething((data) => {
+    resolve(data);   //here if data is fetched new promise is returned with data as argument hence you can use then and get the data.
+  }, error => {
+    reject(error)    //here if data is fetched new promise is returned with error as argument hence you can use catch and get the data.
+  });
+});
 
 
+Working with multiple promise
+-----------------------------
+Promise.all([one, two]).then(([data1, data2]) => {  
+  // this will execute if either all resolved or atleast 1 rejected (if 1 rejected then others will be skipped)
+})
+
+Promise.allSettled([one, two]).then(([data1, data2]) => {
+  // this will execute irrespective of their status and data1.state => state of promise, data1.data -> data of promise
+});
+
+Promise.race([one, two]).then(()=>{
+    
+}).catch(() => {
+  
+}) ;
+//catch or then execute depend on first promise which is either resolved or rejected
 
 
+.then()
+.catch()
+.finally()  // this fill always exectue no matter if resolved or rejected.
+
+async/await
+-----------
+- async keyword can be added in function 
+async function something() {
+  try {
+    const data1 = await asyncFunction();
+    const data2 = await something2WhichReutnrPromise();
+  } catch(error) {
+    console.log(error);
+  }
+
+// this will be blocked until above resolves.
+}
+- just fancy way of writing promise, under the hood its not async programming rather this thing will wrap itself in then, catch etc.
 
 
