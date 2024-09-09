@@ -567,7 +567,7 @@ Addeventlistener registers things on the bubbling phase, which means the button 
 JS Modules
 ------------
 
-<script src = "something" type="module"> </script> // type = module needs to be mentioned
+<script src = "something" type="module"> </script> // type = module needs to be mentioned (if webpack is used then ignore)
 Export
 
 export const something  //named export
@@ -612,8 +612,12 @@ Workflow:
 DEV: Linting -> Building(webpack) -> reload dev server
 PROD: Linting -> Building(webpack) -> compile (bable) -> optimization (like dynamic webpack output file)
 
-
-
+Browsersupport
+--------------
+Polyfills:
+- can be added manually, use to for olderbrowser to understand some code like promise
+- can be merged with webpack, and now webpack will use polyfill during compilation
+- can be merged with webpack and babel together.
 
 
 
