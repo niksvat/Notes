@@ -619,5 +619,7 @@ Polyfills:
 - can be merged with webpack, and now webpack will use polyfill during compilation
 - can be merged with webpack and babel together.
 
-
-
+Deployment
+-----------
+Static hosting: HTML + JS + CSS  (webpack output is simple JS file)
+Dynamic Hosting: NodeJs application which require compilation
