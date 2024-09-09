@@ -610,7 +610,7 @@ Above tools can be installed via npm
 Workflow:
 ---------
 DEV: Linting -> Building(webpack) -> reload dev server
-PROD: Linting -> Building(webpack) -> compile (bable) -> optimization
+PROD: Linting -> Building(webpack) -> compile (bable) -> optimization (like dynamic webpack output file)
 
 
 
