@@ -593,6 +593,26 @@ import('./file.js').then(module => {
   - In one file set globalThis.something = 'val';
   - In another file, let val = globalThis.something;
 
+Build Tools
+-----------
+ESLint: 
+- You can set up config file in project that will tell which rules to enable.
+
+Webpack: 
+- If you start importing files etc, webpack help in combining all js files into 1 big file so that browser will not make separate request to each js file. webpack has its own configuration file, where you can specify entry points, build output etc. 
+- Sourcemap is part of webpack that allows you to defer optimization so that you can debug code in browser dev tools.
+- You can generate new filename (dynamic filename) whenever you make change in js, so that browser won't use cached files.
+
+Babel: You can transpile code into code which can run on old browser.
+
+Above tools can be installed via npm
+
+Workflow:
+---------
+DEV: Linting -> Building(webpack) -> reload dev server
+PROD: Linting -> Building(webpack) -> compile (bable) -> optimization
+
+
 
 
 
