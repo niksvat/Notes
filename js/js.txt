@@ -623,3 +623,29 @@ Deployment
 -----------
 Static hosting: HTML + JS + CSS  (webpack output is simple JS file)
 Dynamic Hosting: NodeJs application which require compilation
+
+Testing
+-------
+- Test runner: mocha
+- Assertions library: chai
+  Headless browser: Request for e2e tests (puppeteer)
+- Now, Jest = testrunner + assertion library 
+
+
+- Example, we have file utils.js
+  either create util.spec.js or util.test.js, runner will pick it up automatically pick these files.
+  Syntax:
+
+  test('something', () => {
+   expect(something).toBe('something');
+  });
+   For puppeteer, you can create headless browser and pick html dom by id and add text or click button etc.
+
+- Mocking:
+   - create __mocks__ folder and whatever exported you can import in test file and these fill be mocked automatically. 
+   - if these are public methods (like axios get) then don't need to import, just declare here.
+
+
+
+
+
