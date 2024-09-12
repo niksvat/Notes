@@ -700,7 +700,35 @@ More properties :-
 ----------------
 If array is of type object which contains less proprty and if we push object which contains all requried but some extra then typescript won't complain.
 
-c
+Function return type
+--------------------
+const result: { res: number, print: () => void}[] = []
+
+Type Alias
+-----------
+type CalculationResult = {res: number, print: () => void};
+const result: CalculationResult = [];
+
+Literal types
+-------------
+let num: 'something'; 
+
+Union type
+-----------
+let num: 'something' | 'other'; // means num can be either something or other but not different
+
+or 
+type PrintMode = 'console' | 'alert';
+
+Enum
+----
+enum OutputMode {
+  CONSOLE,
+  ALERT
+}
+
+const mode: OutputMode = OutputMode.CONSOLE;
+
 
 
  
