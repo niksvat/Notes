@@ -730,9 +730,54 @@ enum OutputMode {
 const mode: OutputMode = OutputMode.CONSOLE;
 
 
+class User {
 
- 
+  name: string;       //these needs to be present
+  private age: number //these needs to be present, you should add private to make it private
 
+  constructor(name: String, age: number){ 
+    this.name = name;
+    this.age = age;
+  }
+}
 
+OR 
 
+we can use shortcut
+
+class User { 
+  constructor(public name: string, private age: number) {}
+}
+
+class Admin extends User {
+  constructor(name: string, age: number, private permissions: string[]) {
+    super(name, age);
+  }
+}
+
+Interface
+---------
+- Blue print for object and 
+- can be used as contract of classes
+
+interface CalculationContainer {      //we can't use "new CalculationContainer"
+  res: number;
+  print(): void        // OR print: () => void
+}
+
+- above is equal to 
+
+  type CalculationContainer {
+    res: number;
+    print(): void;
+  }
+
+- But we can use as contract for classes
+
+  class Something implements CalculationContainer {
+      // now we have to force to use "res" and "print" function
+  }
+
+- we can implement multiple interface and can use 
+  const cal: CalculationContainer = new Someting();
 
