@@ -686,6 +686,11 @@ const result = {
 HTMLElement(typecasting)
 ------------------------
 const num = document.getElementById('num1') as HTMLInputElement;
+const num = <HTMLInputElement>document.getElementById('num1');
+
+const something = document.getElementById('num')!; 
+
+//! only transscript feature, we are saying to typescript that this won't be null(ignore null case)
 
 Convert string to num
 --------------------
@@ -694,6 +699,9 @@ let num = +x; //where x is not num but contains num value.
 Array:
 ------
 let results: {res:number}[] = [];
+let results: Array<someType> = [];
+//both of above are same
+
 const arr = ['MAX'] //automatically infer type
 
 More properties :-
@@ -780,4 +788,28 @@ interface CalculationContainer {      //we can't use "new CalculationContainer"
 
 - we can implement multiple interface and can use 
   const cal: CalculationContainer = new Someting();
+
+Generic type
+------------
+function logAndEcho<T>(val: T) {
+  console.log(val);
+  return val;
+}
+
+logAndEcho<string>("hi").split()  //now I can use split
+
+Compiler(transpile)
+-------------------
+tsc app.ts
+tsc (but we need to have tsconfig.json)  //tsc --init
+
+config file
+-----------
+"target": "es6"  --> this config will help us to target the code that is generate how do you want to transpile
+
+
+
+
+
+
 
