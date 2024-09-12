@@ -646,6 +646,65 @@ Testing
    - if these are public methods (like axios get) then don't need to import, just declare here.
 
 
+Typescript
+----------
+
+- Superset of javascript, we need to transpile it to js for it to work in browsers
+- When using typescript we don't need babel (nextgen -> oldgen) since it done it automatically, it read
+
+variables
+---------
+
+let a: number;
+
+Type-inference
+---------------
+
+Typescript will automatically infer return type of this function 
+function(a:number, b:number){
+  return a+b;
+}
+
+means you don't have to explicitly set
+function(a: number, b: number): number {
+
+}
+
+Typescript also automatically infer return type
+
+const num = 1;
+const result: { res: number } = {
+  res: num
+}
+
+can be written as
+
+const result = {
+  res: num
+}
+
+HTMLElement(typecasting)
+------------------------
+const num = document.getElementById('num1') as HTMLInputElement;
+
+Convert string to num
+--------------------
+let num = +x; //where x is not num but contains num value.
+
+Array:
+------
+let results: {res:number}[] = [];
+const arr = ['MAX'] //automatically infer type
+
+More properties :-
+----------------
+If array is of type object which contains less proprty and if we push object which contains all requried but some extra then typescript won't complain.
+
+c
+
+
+ 
+
 
 
 
