@@ -119,11 +119,52 @@ JAVA JVM
 	- but if you set inittial to x, it won't allow going the heap size < x so thats one way
 
 
+
 - heap
   - soft leak: there are object remain un referenced and gc havne't run (which are garbage)
   - use j(visual)vm to monitor heap size.
   - heatdump: enable jvm flag to print heap dump report in case of ooo
   - use tool from eclipse to analyse heap dump
+
+
+- GC & heap
+  - heap is divided into
+    - young
+      - eden
+      - s0
+      - s1
+    - old
+  - usually without stop-the-world event, GC perform minor garbage collection in young generation, deleting from eden, and replacing it in s0 or s1 (<java8)
+  - stop-the-world event cause GC to remove garbage from old heap
+  - Two iteration 
+    - first it marks object which are referenced
+    - remove other (un-referenced) and place all referenced object together to prevent fragmentation
+  - use j(visual)VM tool to see all these heap parts
+
+- GC Tuning
+  - jsinfo can be used to find out jvm options flag of running process
+  - Some flags:
+    - -verbose:gc => gives when gc runs (minor + major)
+    - flag to turnoff adabptive sizes of s0, s1 and eden
+    - flags available to set old gen vs young gen size
+    - flags available to set survivors(s0, s1, eden) spaces sizes
+    - flag available, when something to be promoted to old (its bedefault set to max)
+
+- GC types
+  - 3 types
+    - serial (only on thread to collect garbage)
+    - parallel (minor + major)
+    - concurrent (again 2 types)
+      - marksweepGC
+      - G1 GC
+  - before java8 bydefault was parallel, otherwise for new its G1
+  - G1 works differently: it doesn't fully collect garbage from old gen, hence minimizing stop-the-world pause
+    - also, it may mark some survivor space as eden to optimize the performance
+    - set number of concurrent thread for G1 GC
+    - flag to run GC when x% of entire heap to full
+    - G1 also supports string dedupe feature (use jvm flag)
+    
+
 
 
 
