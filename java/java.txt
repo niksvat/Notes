@@ -74,3 +74,70 @@ https://medium.com/ssense-tech/dependency-injection-vs-dependency-inversion-vs-i
 - Spring transactions synchonization
   if in current function is synchronized and we are calling an api, then in order to how to avoid dirty read
 - How to implement rate limiting on Rest API?
+
+
+
+
+
+
+
+
+
+=========================================
+JAVA JVM
+=========================================
+
+- source code => byte code => compile to native computer code (codecache)
+- jvm options to see which are being comiplied to native computer code
+- it take time for compiler to optimize which code is re-used hence compiled to native lanugage
+- C1, C2, C3, C4 compilers (4 is last level -> native compile)
+- using jvm flag upate codecache size
+- 32, 64 bit jvm
+- client, server type of compilation
+- "client" start quickly if no long or double is used
+- for web server or any other use "server" compilation
+
+- Stack, Heap, metaspace memory in java (before 7 it was perf)
+- stack for primitive types and references
+- heap for objects
+  - we can increase initial and max heap size using jvm flags
+- metaspace for static
+
+
+- string pool:
+  - automatic assigned reference variables to same string object, can't do for calculated strings
+  - use intern() to put string in stringpool so it can be refernced again but also mind extra method call
+  - it lives in heap
+  - string stored like in hashmap and we can cahnges heapsiezz (initial, max, buckets etc) to optimize
+
+
+- GC
+  - java runs it automatically
+  - we cau advise jvm to run garbage collection using system.gc() but we shouldn't do it
+  - finalise method is deprecated and shouldn't be use
+  - java optimisations: when gc runs it can see memory is not being used and can give it back to OS.
+	- but if you set inittial to x, it won't allow going the heap size < x so thats one way
+
+
+- heap
+  - soft leak: there are object remain un referenced and gc havne't run (which are garbage)
+  - use j(visual)vm to monitor heap size.
+  - heatdump: enable jvm flag to print heap dump report in case of ooo
+  - use tool from eclipse to analyse heap dump
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
