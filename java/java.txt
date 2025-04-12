@@ -79,7 +79,18 @@ https://medium.com/ssense-tech/dependency-injection-vs-dependency-inversion-vs-i
 
 
 
+===============
+Java 21 features
+===============
 
+
+
+- what new concepts i have used in java 21??
+  - https://iammadhankumar.medium.com/exploring-the-latest-features-in-java-21-dfd7ec830ace
+    - record pattern
+    - string templates
+    - Virtual threads
+    - switch for instance of if-else checking
 
 
 
@@ -163,13 +174,39 @@ JAVA JVM
     - set number of concurrent thread for G1 GC
     - flag to run GC when x% of entire heap to full
     - G1 also supports string dedupe feature (use jvm flag)
-    
+  
 
 
+====================
+Java multi-threading
+====================
 
+- In Multi-processing Processes have their own memory space, and context switchs are costly as oppose to multithreading.
+- Multi-processing are good for CPU bound process while multi-threading are good for I/O bound process
+- Two threads can be run parallel in multiple CPU concurrently but same CPU can run them one by one
 
+- Two ways:-
+  - extends thread class and extends run() method (start thread by start() method)
+  - implement runnable interface and implement run() method (start thread by start() method), and pass this implemented class as constructor to new Thread() class
 
+- Daemon thread: Won't keep JVM running (it will keep running in background UNTIL JVM exits), If JVM shuts down, so does all daemon threads
 
+- join(): calling thread will wait(and freeze the execution) till on the thread it called terminates, afterwards it will continue
+- wait(), notify(): wait forces current thread to wait, until other thread call notify to resume the execution
+
+- Race condition: Two threads are racing for same thing, multiple thread are reading same object and 1 or more thread writing to it
+  - read-modify-write pattern
+  - check-then-act pattern
+
+- synchronised()
+  - apply this on an object, it can be "this"
+  - for static its apply on class 
+
+- Thread safety :-
+  - Local varaible lives in each thread stack
+  - while object refernces also live in each thread stack, but underlying object lives in heap(shared space). 
+  - If a resource is created, used and disposed within the control of the same thread, and never escapes the control of this thread, the use of that resource is thread safe. 
+  - Immutable objects are great since it can't be updated.
 
 
 
